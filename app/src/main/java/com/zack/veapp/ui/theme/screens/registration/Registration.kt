@@ -69,7 +69,7 @@ fun Registration() {
         OutlinedTextField(
             value = name,
             onValueChange = {name=it},
-            label = { Text(text = "Enter your name")},
+            label = { Text(text = "Enter your name", color = Color.White)},
             shape = RoundedCornerShape(25.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Person, contentDescription = "person")},
             colors = OutlinedTextFieldDefaults.colors(
@@ -81,7 +81,7 @@ fun Registration() {
         OutlinedTextField(
             value = email,
             onValueChange = {name = it},
-            label = { Text(text = "Enter your email")},
+            label = { Text(text = "Enter your email", color = Color.White)},
             shape = RoundedCornerShape(25.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription ="email")},
             colors = OutlinedTextFieldDefaults.colors(
@@ -93,7 +93,7 @@ fun Registration() {
         OutlinedTextField(
             value = password,
             onValueChange ={password = it},
-            label = { Text(text = "Enter your password")},
+            label = { Text(text = "Enter your password", color = Color.White)},
             shape = RoundedCornerShape(25.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "password")},
             colors = OutlinedTextFieldDefaults.colors(
@@ -105,7 +105,7 @@ fun Registration() {
         OutlinedTextField(
             value = confirm_password,
             onValueChange = {confirm_password = it},
-            label = { Text(text = "Confirm your password")},
+            label = { Text(text = "Confirm your password", color = Color.White)},
             shape = RoundedCornerShape(25.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "confirm password")},
             colors = OutlinedTextFieldDefaults.colors(
