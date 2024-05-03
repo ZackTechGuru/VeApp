@@ -19,6 +19,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -35,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zack.veapp.navigation.ROUTE_REGISTER
 import com.zack.veapp.ui.theme.BrightYellow
 import com.zack.veapp.ui.theme.Purple
 
@@ -106,11 +108,12 @@ fun Login(navController:NavHostController) {
                 fontSize = 15.sp)
         }
         Spacer(modifier = Modifier.height(150.dp))
-        Button(onClick = { },
+        Text(text = "New User?", fontSize = 15.sp, color = Color.White)
+        TextButton(onClick = {navController.navigate(ROUTE_REGISTER) },
             colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified) ,
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
             ) {
-            Text(text = "New user? Register to login.",
+            Text(text = "Signup.",
                 fontSize = 15.sp)
 
         }

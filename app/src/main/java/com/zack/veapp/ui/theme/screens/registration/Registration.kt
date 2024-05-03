@@ -38,11 +38,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.ui.theme.BrightYellow
-import com.zack.veapp.ui.theme.DarkYellow
 import com.zack.veapp.ui.theme.Purple
 
 @Composable
@@ -159,15 +157,8 @@ fun Registration(navController: NavHostController) {
                 fontSize = 15.sp)
 
         }
-
-
-
-
     }
-    
-
-
-}
+ }
 
 @Preview
 @Composable
