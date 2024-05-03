@@ -31,22 +31,27 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.ui.theme.BrightYellow
 import com.zack.veapp.ui.theme.DarkYellow
 import com.zack.veapp.ui.theme.Purple
 
 @Composable
-fun Registration() {
+fun Registration(navController: NavHostController) {
     var name by remember { mutableStateOf("")}
     var email by remember { mutableStateOf("")}
     var password by remember { mutableStateOf("")}
     var confirm_password by remember { mutableStateOf("")}
+    var context= LocalContext.current
 
 
     Column (
@@ -167,6 +172,6 @@ fun Registration() {
 @Preview
 @Composable
 private fun RegistrationPrev() {
-    Registration()
+    Registration(rememberNavController())
 
 }

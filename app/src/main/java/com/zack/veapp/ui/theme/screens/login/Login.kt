@@ -27,18 +27,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.ui.theme.BrightYellow
 import com.zack.veapp.ui.theme.Purple
 
 @Composable
-fun Login() {
+fun Login(navController:NavHostController) {
     var email by remember { mutableStateOf("")}
     var password by remember { mutableStateOf("")}
+    var context= LocalContext.current
     val isChecked = remember { mutableStateOf(false) }
 
     Column (
@@ -122,6 +126,6 @@ fun Login() {
 @Preview
 @Composable
 private fun LoginPre() {
-    Login()
+    Login(rememberNavController())
 
 }
