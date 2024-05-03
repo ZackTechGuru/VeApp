@@ -23,6 +23,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -40,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.zack.veapp.navigation.ROUTE_LOGIN
 import com.zack.veapp.ui.theme.BrightYellow
 import com.zack.veapp.ui.theme.Purple
 
@@ -149,7 +151,7 @@ fun Registration(navController: NavHostController) {
             )
             }
         Spacer(modifier = Modifier.height(150.dp))
-        Button(onClick = { },
+        TextButton(onClick = { navController.navigate(ROUTE_LOGIN)},
             colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified),
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
             ) {
