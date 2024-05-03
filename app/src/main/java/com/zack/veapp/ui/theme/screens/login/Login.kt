@@ -98,15 +98,9 @@ fun Login(navController:NavHostController) {
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
         ) {
             Text(text = " Login", fontSize = 15.sp, color = Color.Black)}
-        Spacer(modifier = Modifier.height(20.dp))
 
-        Button(onClick = { },
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified),
-            modifier = Modifier.size(width = 250.dp, height = 35.dp)
-            ) {
-            Text(text = "Forgot password?",
-                fontSize = 15.sp)
-        }
+
+
         Spacer(modifier = Modifier.height(150.dp))
         Text(text = "New User?", fontSize = 15.sp, color = Color.White)
         TextButton(onClick = {navController.navigate(ROUTE_REGISTER) },

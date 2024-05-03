@@ -11,18 +11,24 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.ui.theme.screens.login.Login
 import com.zack.veapp.ui.theme.screens.registration.Registration
+import com.zack.veapp.ui.theme.screens.splash.Splash
 import java.security.AccessController
 
 @Composable
-fun AppNavHost(modifier: Modifier= Modifier, navController: NavHostController= rememberNavController(),startDestination: String= ROUTE_LOGIN) {
-    NavHost(navController = navController, modifier=modifier,startDestination=startDestination){
-        composable(ROUTE_LOGIN){
+fun AppNavHost(modifier: Modifier= Modifier, navController: NavHostController= rememberNavController(),startDestination: String= ROUTE_SPLASH) {
+    NavHost(
+        navController = navController,
+        modifier = modifier,
+        startDestination = startDestination
+    ) {
+        composable(ROUTE_LOGIN) {
             Login(navController)
         }
-        composable(ROUTE_REGISTER){
+        composable(ROUTE_REGISTER) {
             Registration(navController)
         }
-
+        composable(ROUTE_SPLASH) {
+            Splash(navController)
+        }
     }
-
 }
