@@ -38,7 +38,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.navigation.ROUTE_REGISTER
 import com.zack.veapp.ui.theme.BrightYellow
+import com.zack.veapp.ui.theme.Greyblue
 import com.zack.veapp.ui.theme.Purple
+import com.zack.veapp.ui.theme.SecondaryBlue
 
 @Composable
 fun Login(navController:NavHostController) {
@@ -52,21 +54,21 @@ fun Login(navController:NavHostController) {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Purple)
+            .background(color = Greyblue)
     ){
         Text(
             text = "Welcome Back,",
             fontFamily = FontFamily.Default,
             fontWeight = FontWeight.Bold,
             fontSize = 25.sp,
-            color = BrightYellow
+            color = SecondaryBlue
         )
         Spacer(modifier = Modifier.height(0.dp))
         Text(
             text = "Login to continue!",
             fontFamily = FontFamily.SansSerif,
             fontSize = 12.sp,
-            color = Color.White
+            color = SecondaryBlue
         )
         Spacer(modifier = Modifier.height(30.dp))
         OutlinedTextField(
@@ -78,7 +80,7 @@ fun Login(navController:NavHostController) {
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color. White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue)
         )
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
@@ -90,25 +92,27 @@ fun Login(navController:NavHostController) {
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue
+            )
             )
         Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = { },
-            colors = ButtonDefaults.buttonColors(containerColor = BrightYellow),
+            colors = ButtonDefaults.buttonColors(containerColor = SecondaryBlue),
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
         ) {
-            Text(text = " Login", fontSize = 15.sp, color = Color.Black)}
+            Text(text = " Login", fontSize = 15.sp, color = Greyblue)}
 
 
 
         Spacer(modifier = Modifier.height(150.dp))
-        Text(text = "New User?", fontSize = 15.sp, color = Color.White)
-        TextButton(onClick = {navController.navigate(ROUTE_REGISTER) },
+        Text(text = "New User?", fontSize = 15.sp, color = SecondaryBlue)
+        TextButton(onClick = {navController.navigate(ROUTE_REGISTER)},
             colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified) ,
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
             ) {
             Text(text = "Signup.",
-                fontSize = 15.sp)
+                fontSize = 15.sp,
+                color = SecondaryBlue)
 
         }
 

@@ -43,7 +43,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.navigation.ROUTE_LOGIN
 import com.zack.veapp.ui.theme.BrightYellow
+import com.zack.veapp.ui.theme.Greyblue
+import com.zack.veapp.ui.theme.PrimaryGrey
 import com.zack.veapp.ui.theme.Purple
+import com.zack.veapp.ui.theme.SecondaryBlue
 
 @Composable
 fun Registration(navController: NavHostController) {
@@ -59,14 +62,14 @@ fun Registration(navController: NavHostController) {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Purple)
+            .background(color = Greyblue)
     ){
         Text(
             text = "Create New Account",
             fontFamily = FontFamily.Default,
             fontWeight = FontWeight.Bold,
             fontSize = 25.sp,
-            color = BrightYellow
+            color = SecondaryBlue
         )
         Spacer(modifier = Modifier.height(30.dp))
 
@@ -79,20 +82,20 @@ fun Registration(navController: NavHostController) {
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color. White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue)
         )
         Spacer(modifier = Modifier.height(20.dp))
 
         OutlinedTextField(
             value = email,
-            onValueChange = {name = it},
+            onValueChange = {email = it},
             label = { Text(text = "Enter email", color = Color.White)},
             shape = RoundedCornerShape(25.dp),
             leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription ="email")},
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue)
         )
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -105,7 +108,7 @@ fun Registration(navController: NavHostController) {
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue)
         )
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -118,15 +121,15 @@ fun Registration(navController: NavHostController) {
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.White,
                 unfocusedBorderColor = Color.White,
-                unfocusedLeadingIconColor = BrightYellow)
+                unfocusedLeadingIconColor = SecondaryBlue)
         )
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = { },
-            colors = ButtonDefaults.buttonColors(containerColor = BrightYellow),
+            colors = ButtonDefaults.buttonColors(containerColor = SecondaryBlue),
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
               ) {
-            Text(text = " Create account", fontSize = 15.sp, color = Color.Black)}
+            Text(text = " Create account", fontSize = 15.sp, color = Greyblue)}
 
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -147,7 +150,7 @@ fun Registration(navController: NavHostController) {
                 modifier = Modifier.width(190.dp),
                 textAlign = TextAlign.Center,
                 fontSize = 12.sp,
-                color = Color.White
+                color = SecondaryBlue
             )
             }
         Spacer(modifier = Modifier.height(150.dp))
@@ -156,8 +159,8 @@ fun Registration(navController: NavHostController) {
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
             ) {
             Text(text = "Already a user? Login",
-                fontSize = 15.sp)
-
+                fontSize = 15.sp,
+                color = SecondaryBlue)
         }
     }
  }
