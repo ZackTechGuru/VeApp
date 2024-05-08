@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VeApp</string>
+    <string name="select_user_type">Select User Type</string>
+    <string name="parent_login">Parent Login</string>
+    <string name="driver_login">Driver Login</string>
+    <string name="admin_login">Admin Login</string>
 </resources>

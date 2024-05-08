@@ -6,8 +6,10 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,11 +42,15 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zack.veapp.R
+import com.zack.veapp.navigation.ROUTE_DRIVER
+import com.zack.veapp.navigation.ROUTE_PARENT
 import com.zack.veapp.navigation.ROUTE_REGISTER
+import com.zack.veapp.navigation.ROUTE_SCHOOL
 import com.zack.veapp.ui.theme.BrightYellow
 import com.zack.veapp.ui.theme.Greyblue
 import com.zack.veapp.ui.theme.Purple
 import com.zack.veapp.ui.theme.SecondaryBlue
+import com.zack.veapp.ui.theme.screens.selectusertype.UserTypeSelection
 
 @Composable
 fun Login(navController:NavHostController) {
@@ -70,7 +76,7 @@ fun Login(navController:NavHostController) {
             fontSize = 25.sp,
             color = SecondaryBlue
         )
-        Spacer(modifier = Modifier.height(0.dp))
+        Spacer(modifier = Modifier.height(5.dp))
         Text(
             text = "Login to continue!",
             fontFamily = FontFamily.SansSerif,
@@ -108,10 +114,18 @@ fun Login(navController:NavHostController) {
             modifier = Modifier.size(width = 250.dp, height = 35.dp)
         ) {
             Text(text = " Login", fontSize = 15.sp, color = Greyblue)}
+        Spacer(modifier = Modifier.height(20.dp))
 
+        Row(modifier = Modifier,
+            horizontalArrangement = Arrangement.SpaceBetween) {
 
-
-        Spacer(modifier = Modifier.height(150.dp))
+            UserTypeSelection(
+                onParentLogin = { navController.navigate(ROUTE_PARENT)},
+                onDriverLogin = { navController.navigate(ROUTE_DRIVER)},
+                onAdminLogin = { navController.navigate(ROUTE_SCHOOL)}
+            )
+        }
+        Spacer(modifier = Modifier.height(60.dp))
         Text(text = "New User?", fontSize = 15.sp, color = SecondaryBlue)
         TextButton(onClick = {navController.navigate(ROUTE_REGISTER)},
             colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified) ,
