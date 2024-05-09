@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598706001540",
+    "project_id": "veapp-777a7",
+    "storage_bucket": "veapp-777a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598706001540:android:56884b0393c21bec8b54d1",
+        "android_client_info": {
+          "package_name": "com.zack.veapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCEnFTlvZ4rwnw1h31PDCVnIQaumisC3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

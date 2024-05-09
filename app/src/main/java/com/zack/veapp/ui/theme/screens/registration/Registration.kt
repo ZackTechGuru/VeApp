@@ -164,7 +164,6 @@ fun Registration(navController: NavHostController) {
         }
     }
  }
-
 @Preview
 @Composable
 private fun RegistrationPrev() {
